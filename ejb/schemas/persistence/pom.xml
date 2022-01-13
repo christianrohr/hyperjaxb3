@@ -54,6 +54,24 @@
 						</plugin>
 					</plugins>
 				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.glassfish.jaxb</groupId>
+						<artifactId>jaxb-xjc</artifactId>
+						<version>${jaxb.version}</version>
+					</dependency>
+					<dependency>
+						<groupId>org.glassfish.jaxb</groupId>
+						<artifactId>jaxb-core</artifactId>
+						<version>${jaxb.version}</version>
+					</dependency>
+					<dependency>
+					    <groupId>javax.activation</groupId>
+					    <artifactId>javax.activation-api</artifactId>
+					    <version>1.2.0</version>
+					</dependency>
+					
+				</dependencies>
 			</plugin>
 		</plugins>
 	</build>

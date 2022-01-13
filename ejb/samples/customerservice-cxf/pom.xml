@@ -94,7 +94,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.7</version>
+			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -131,8 +131,9 @@
 					<inherited>true</inherited>
 					<artifactId>maven-compiler-plugin</artifactId>
 					<configuration>
-						<source>1.5</source>
-						<target>1.5</target>
+						<!-- <source>1.5</source>
+						<target>1.5</target> -->
+						<release>11</release>
 					</configuration>
 				</plugin>
 			</plugins>
