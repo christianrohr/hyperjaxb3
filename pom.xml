@@ -3,7 +3,7 @@
 	<groupId>org.jvnet.hyperjaxb3</groupId>
 	<artifactId>hyperjaxb3</artifactId>
 	<packaging>pom</packaging>
-	<version>0.6.3-SNAPSHOT</version>
+	<version>0.6.4-SNAPSHOT</version>
 	<name>Hyperjaxb3</name>
 	<url>https://github.com/highsource/hyperjaxb3</url>
 	<description>Hyperjaxb3 is an open source project which provides relational persistence for JAXB objects.</description>
@@ -63,8 +63,10 @@
 		<maven.version>2.0.9</maven.version>
 		<annox.version>1.0.1</annox.version>
 		<jaxb2-basics.version>0.10.0</jaxb2-basics.version>
-		<maven-jaxb2-plugin.version>0.13.1</maven-jaxb2-plugin.version>
-		<jaxb.version>2.2.11</jaxb.version>
+		<maven-jaxb2-plugin.version>0.14.0</maven-jaxb2-plugin.version>
+		<jaxb.version>2.3.1</jaxb.version>
+		<jaxb-core.version>2.3.0</jaxb-core.version>
+		<jaxb-xjc.version>2.2.11</jaxb-xjc.version>
 		<maven.plugin.testing.version>2.1</maven.plugin.testing.version>
 		<maven.plugin.plugin.version>3.5</maven.plugin.plugin.version>
 		<jaxb2-basics-annotate.version>1.0.2</jaxb2-basics-annotate.version>
@@ -332,6 +334,11 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
+				<groupId>javax</groupId>
+				<artifactId>javaee-api</artifactId>
+				<version>7.0</version>
+			</dependency>
+			<dependency>
 				<groupId>org.jvnet.jaxb2_commons</groupId>
 				<artifactId>jaxb2-basics-runtime</artifactId>
 				<version>${jaxb2-basics.version}</version>
@@ -432,11 +439,21 @@
 			<dependency>
 				<groupId>org.glassfish.jaxb</groupId>
 				<artifactId>jaxb-core</artifactId>
-				<version>${jaxb.version}</version>
+				<version>${jaxb-core.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.glassfish.jaxb</groupId>
 				<artifactId>jaxb-xjc</artifactId>
+				<version>${jaxb-xjc.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.glassfish.jaxb</groupId>
+				<artifactId>codemodel</artifactId>
+				<version>${jaxb.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.glassfish.jaxb</groupId>
+				<artifactId>xsom</artifactId>
 				<version>${jaxb.version}</version>
 			</dependency>
 			<!-- JUnit -->
